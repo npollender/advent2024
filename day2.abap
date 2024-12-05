@@ -65,7 +65,7 @@ FUNCTION znp_aoc_2024_day2.
             lv_flag = 'D'.
           ELSE.
             IF sy-tabix = lines( lt_levels ) AND lv_index IS INITIAL.
-              "last index, therefore safe
+              "last index of first iteration, therefore safe
             ELSEIF lv_index <> lines( lt_levels ).
               lv_index = lv_index + 1.
               CLEAR: lv_prev, lv_flag.
