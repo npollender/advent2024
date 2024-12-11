@@ -23,6 +23,7 @@ FUNCTION znp_aoc_2024_day2.
         lv_prev   TYPE i,
         lv_diff   TYPE i,
         lv_flag   TYPE c. "I for increasing, D for decreasing
+        
   LOOP AT lt_lines INTO lv_line.
     CLEAR: lt_levels[], lv_prev, lv_flag.
     SPLIT lv_line AT space INTO TABLE lt_levels.
@@ -48,6 +49,7 @@ FUNCTION znp_aoc_2024_day2.
 * Part 2
   DATA: lv_index TYPE i VALUE 0,
         lv_done  TYPE boolean.
+
   LOOP AT lt_lines INTO lv_line.
     CLEAR: lt_levels[], lv_prev, lv_flag, lv_index.
     SPLIT lv_line AT space INTO TABLE lt_levels.
